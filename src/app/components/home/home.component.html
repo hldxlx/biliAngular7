@@ -1,0 +1,67 @@
+<p>
+  引入图片
+</p>
+<img src="assets/images/monkey.jpg" alt="猴子">
+<img [src]="picurl" alt="">
+<div>循环显示数据的索引(key)</div>
+<ul>
+  <li *ngFor="let item of list;let key=index;">
+    <span *ngIf="key==1" class="green">{{key}}---{{item.title}}</span>
+    <span *ngIf="key!=1">{{key}}---{{item.title}}</span>
+  </li>
+</ul>
+<div>条件判断*ngIf</div>
+<div *ngIf="flag">
+  <img src="assets/images/monkey.jpg">
+</div>
+<div *ngIf="!flag">
+  无图片
+</div>
+<div>条件判断*ngSwitch</div>
+<span [ngSwitch]="orderStatus">
+  <p *ngSwitchCase="1">
+    已支付
+  </p>
+  <p *ngSwitchCase="2">
+    支付并确认
+  </p>
+  <p *ngSwitchCase="3">
+    已发货
+  </p>
+</span>
+<div>属性[ngClass][ngStyle]</div>
+<div class="green">[ngClass]演示（尽量不要用dom来改变class）</div>
+
+<div [ngClass]="{'green':true}">[ngClass]演示</div>
+
+<div [ngClass]="{'blue':falg,'orange':!falg}">[ngClass]演示</div>
+
+<div>循环数组，让数组显示的第一个元素的样式为green</div>
+<ul>
+  <li *ngFor="let item of list;let key=index;" [ngClass]="{'green':key===0,'blue':key===1}">
+    <span>{{key}}---{{item.title}}</span>
+  </li>
+</ul>
+
+<p style="color: blue;">p标签</p>
+<p [ngStyle]="{'color':'blue'}">p标签</p>
+<p [ngStyle]="{'color':attr}">p标签</p>
+
+<p>管道</p>
+{{today | date:'yyyy-MM-dd HH:mm:ss'}}
+
+<button (click)="run($event)">事件</button>
+<b>{{title}}</b>
+<button (click)="setTitle()">事件</button>
+
+<p>表单事件 事件对象</p>
+<!--<input type="text" (keydown)="keyDown()" />-->
+
+<input type="text" (keydown)="keyDown($event)" />
+
+<p>双向数据绑定--MVVM  只是针对表单</p>
+<input type="text" [(ngModel)]="keywords" />
+{{keywords}}
+
+<button (click)="changeKeywords()">改变keywords的值</button>
+<button (click)="getKeywords()">获取keywords的值</button>
