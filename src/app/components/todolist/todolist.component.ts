@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+//引入服务
+import {StorageService} from "../../services/storage.service";
 @Component({
   selector: 'app-todolist',
   templateUrl: './todolist.component.html',
@@ -8,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class TodolistComponent implements OnInit {
   public keyword:string;
   public todolist:any[]=[];
-  constructor() { }
+  constructor(public storage:StorageService) {
+
+  }
 
   ngOnInit() {
+    let todolist:any = this.storage.get('todolist');
+    if(todolist){
+      this.todolist = todolist;
+    }
   }
   doAdd(e){
     if(e.keyCode==13) {
@@ -20,6 +27,7 @@ export class TodolistComponent implements OnInit {
           status:0 //0 表示代办
         });
         this.keyword = '';
+        this.storage.set('todolist',this.todolist);
       }else{
           alert('数据已经存在');
           this.keyword = '';
@@ -30,6 +38,7 @@ export class TodolistComponent implements OnInit {
 
   deleteData(key){
     this.todolist.splice(key,1);
+    this.storage.set('todolist',this.todolist);
   }
   //如果数组有keyword返回true,否则返回false
   todolistHaskeyword(todolist:any,keyword:any){
@@ -47,6 +56,11 @@ export class TodolistComponent implements OnInit {
         }
     }
     return false;
+  }
+
+  checkBoxChange(){
+    console.log("事件触发了");
+    this.storage.set('todolist',this.todolist);
   }
 
 }

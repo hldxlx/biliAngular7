@@ -12,7 +12,8 @@ import {SearchComponent} from "./components/search/search.component";
 import {TodolistComponent} from "./components/todolist/todolist.component";
 import {FormComponent} from "./components/form/form.component";
 
-
+//引入并且配置服务
+import {StorageService} from "./services/storage.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import {FormComponent} from "./components/form/form.component";
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

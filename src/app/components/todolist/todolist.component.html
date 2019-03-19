@@ -6,7 +6,7 @@
 
 <ul>
   <li *ngFor="let item of todolist;let key = index;" [hidden]="item.status==1">
-    <input type="checkbox" [(ngModel)]="item.status"/>
+    <input type="checkbox" [(ngModel)]="item.status" (change)="checkBoxChange()"/>
     {{item.title}}---<button (click)="deleteData(key)">X</button>
   </li>
 </ul>
@@ -14,7 +14,7 @@
 <h2>已完成事项</h2>
 <ul>
   <li *ngFor="let item of todolist;let key = index;" [hidden]="item.status==0">
-    <input type="checkbox" [(ngModel)]="item.status"/>
+    <input type="checkbox" [(ngModel)]="item.status" (change)="checkBoxChange()"/>
     {{item.title}}---<button (click)="deleteData(key)">X</button>
   </li>
 </ul>
