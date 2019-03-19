@@ -14,6 +14,7 @@ import {FormComponent} from "./components/form/form.component";
 
 //引入并且配置服务
 import {StorageService} from "./services/storage.service";
+import { TransitionComponent } from './components/transition/transition.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {StorageService} from "./services/storage.service";
     NewsComponent,
     HeaderComponent,
     SearchComponent,
+    TransitionComponent,
     TodolistComponent,
     HomeComponent,
     FormComponent

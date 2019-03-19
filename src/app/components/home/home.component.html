@@ -1,3 +1,4 @@
+<app-header #header></app-header>
 <p>
   引入图片
 </p>
@@ -65,3 +66,16 @@
 
 <button (click)="changeKeywords()">改变keywords的值</button>
 <button (click)="getKeywords()">获取keywords的值</button>
+
+<h2>演示dom操作</h2>
+<div id="box">
+  this is box
+</div>
+<div id="box1" *ngIf="flag">
+  this is box1
+</div>
+<hr>
+<div #myBox>
+  我是一个dom节点666
+</div>
+<button (click)="getChildRun()">获取子组件的方法</button>
