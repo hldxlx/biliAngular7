@@ -35,6 +35,8 @@ export class HomeComponent implements OnInit {
   public attr:string = 'red';
   public today:any = new Date();
   public keywords:string='默认值 ';
+  public titleTwo:string="首页组件的标题";
+  public msg:string="我是父组件的msg";
 
   //获取dom节点
   @ViewChild('myBox') myBox:any;
@@ -94,6 +96,9 @@ export class HomeComponent implements OnInit {
   }
   getKeywords(){
     console.log(this.keywords);
+  }
+  run2(){
+    alert("我是父组件的run2方法");
   }
 
 

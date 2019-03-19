@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-news',
@@ -60,6 +60,7 @@ export class NewsComponent implements OnInit {
       title:'奥迪c'
     }]
   }]
+  @ViewChild('footer') footer:any;
   constructor() {
     this.message = '这是给属性赋值--（改变属性的值）';
     this.msg = '改变后的msg的值'
@@ -67,6 +68,13 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+  getChildMsg(){
+    //获取footer子组件的数据
+    console.log(this.footer.msg);;
+  }
+  getChildRun(){
+    this.footer.run();
   }
 
 }
