@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  @Output() private outer = new EventEmitter();
+
   public msg = "我是子组件footer的一个msg";
   constructor() { }
 
@@ -13,6 +15,10 @@ export class FooterComponent implements OnInit {
   }
   run(){
     alert("我是子组件的run方法");
+  }
+  sendParent(){
+    this.outer.emit('我是子组件的数据');
+
   }
 
 }

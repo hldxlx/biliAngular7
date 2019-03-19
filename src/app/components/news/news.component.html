@@ -47,7 +47,7 @@
     </ul>
   </li>
 </ul>
-<app-footer #footer></app-footer>
+<app-footer #footer (outer)="run($event)"></app-footer>
 <button>获取子组件的msg</button>
 <button (click)="getChildMsg()">折行子组件的方法</button>
 <button (click)="getChildRun()">折行子组件的run方法</button>

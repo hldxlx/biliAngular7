@@ -76,5 +76,10 @@ export class NewsComponent implements OnInit {
   getChildRun(){
     this.footer.run();
   }
+  run(e){
+    console.log(e);//子组件给父组件广播的数据
+    alert("我是父组件的run方法")
+  }
+
 
 }
