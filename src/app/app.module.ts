@@ -13,16 +13,17 @@ import {SearchComponent} from "./components/search/search.component";
 import {TodolistComponent} from "./components/todolist/todolist.component";
 import {FormComponent} from "./components/form/form.component";
 
+//引入并且配置服务
+import {StorageService} from "./services/storage.service";
+import {RequestService} from "./services/request.service";
+import {HttpserviceService} from "./services/httpservice.service";
 
 import { TransitionComponent} from './components/transition/transition.component';
 import {FooterComponent} from "./components/footer/footer.component";
 import {KissComponent} from "./components/kiss/kiss.component";
 import { ListComponent } from './components/list/list.component';
 import { ProductComponent } from './components/product/product.component';
-//引入并且配置服务
-import {StorageService} from "./services/storage.service";
-import {RequestService} from "./services/request.service";
-import {HttpserviceService} from "./services/httpservice.service";
+import { NewscontentComponent } from './components/newscontent/newscontent.component';
 
 
 
@@ -39,6 +40,7 @@ import {HttpserviceService} from "./services/httpservice.service";
     ListComponent,
     KissComponent,
     ProductComponent,
+    NewscontentComponent,
     HomeComponent,
     FormComponent
   ],

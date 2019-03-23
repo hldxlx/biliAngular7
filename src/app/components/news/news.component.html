@@ -51,3 +51,11 @@
 <button>获取子组件的msg</button>
 <button (click)="getChildMsg()">折行子组件的方法</button>
 <button (click)="getChildRun()">折行子组件的run方法</button>
+<hr>
+<a [routerLink]="['/newscontent']" routerLinkActive="active">跳到新闻详情</a>
+<ul>
+  <li *ngFor="let item of list;let key=index;">
+    <!--<a href="/newcontent?aid=123">{{key}}-&#45;&#45;{{item}}</a>-->
+    <a [routerLink]="['/newscontent']" [queryParams]="{aid:key,name:'张三'}">{{key}}--{{item}}</a>
+  </li>
+</ul>

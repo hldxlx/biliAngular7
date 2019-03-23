@@ -59,7 +59,9 @@ export class NewsComponent implements OnInit {
     {
       title:'奥迪c'
     }]
-  }]
+  }];
+  public list:any[]=[];
+
   @ViewChild('footer') footer:any;
   constructor() {
     this.message = '这是给属性赋值--（改变属性的值）';
@@ -68,6 +70,9 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit() {
+    for(var i=0;i<10;i++){
+      this.list.push('这是第'+i+'条数据')
+    }
   }
   getChildMsg(){
     //获取footer子组件的数据
