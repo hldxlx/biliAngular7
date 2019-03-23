@@ -60,7 +60,7 @@ export class NewsComponent implements OnInit {
       title:'奥迪c'
     }]
   }];
-  public list:any[]=[];
+  public list2:any[]=[];
 
   @ViewChild('footer') footer:any;
   constructor() {
@@ -71,7 +71,7 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
     for(var i=0;i<10;i++){
-      this.list.push('这是第'+i+'条数据')
+      this.list2.push('这是第'+i+'条数据')
     }
   }
   getChildMsg(){

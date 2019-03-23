@@ -1,4 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { SlistComponent } from './components/sport/slist/slist.component';
+import { ScateComponent } from './components/sport/scate/scate.component';
+import { SettingComponent } from './components/product/setting/setting.component';
 import { NgModule } from '@angular/core';
 import { HttpClientModule,HttpClientJsonpModule } from '@angular/common/http';
 //引入表单相应模块，才可以用双向数据绑定
@@ -26,6 +29,9 @@ import { ProductComponent } from './components/product/product.component';
 import { NewscontentComponent } from './components/newscontent/newscontent.component';
 import { NewscontenttwoComponent } from './components/newscontenttwo/newscontenttwo.component';
 import { ProductcontentComponent } from './components/productcontent/productcontent.component';
+import { SportComponent } from './components/sport/sport.component';
+import { WelcomeComponent }from './components/product/welcome/welcome.component';
+import { ActComponent } from './components/act/act.component';
 
 
 
@@ -45,6 +51,12 @@ import { ProductcontentComponent } from './components/productcontent/productcont
     NewscontentComponent,
     NewscontenttwoComponent,
     ProductcontentComponent,
+    SportComponent,
+    WelcomeComponent,
+    SettingComponent,
+    ScateComponent,
+    SlistComponent,
+    ActComponent,
     HomeComponent,
     FormComponent
   ],

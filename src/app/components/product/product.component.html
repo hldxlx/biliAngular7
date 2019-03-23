@@ -5,3 +5,14 @@
 <button (click)="goProductsContent()">js跳转路由</button>
 <button (click)="goHome()">js跳转到首页</button>
 <button (click)="goNews()">get传值js跳转路由</button>
+
+<div class="content">
+  <div class="left">
+    <a [routerLink]="['/product/welcome']" routerLinkActive="active">欢迎产品</a>
+    <br>
+    <a [routerLink]="['/product/setting']" routerLinkActive="active">系统设置</a>
+  </div>
+  <div class="right">
+    <router-outlet></router-outlet>
+  </div>
+</div>
