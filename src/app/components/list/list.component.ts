@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 //当做一个服务
 import { HttpClient,HttpHandlers } from '@angular/common/http';
+//使用服务里面的axios获取数据
+import {HttpserviceService} from "../../services/httpservice.service";
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -8,7 +11,9 @@ import { HttpClient,HttpHandlers } from '@angular/common/http';
 })
 export class ListComponent implements OnInit {
   public list:any[]=[];
-  constructor(public http:HttpClient) { }
+  constructor(public http:HttpClient,public httpService:HttpserviceService) {
+
+  }
 
   ngOnInit() {
   }
@@ -41,6 +46,13 @@ export class ListComponent implements OnInit {
     let api = "http://a.itying.com/api/productlist";
     this.http.jsonp(api,'callback').subscribe((response)=>{
       console.log(response,'1212');
+    })
+  }
+
+  getAxiosData(){
+    let api = "http://a.itying.com/api/productlist";
+    this.httpService.axiosGet(api).then((data)=>{
+      console.log(data,'222');
     })
   }
 
