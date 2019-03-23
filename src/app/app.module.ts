@@ -18,11 +18,12 @@ import { TransitionComponent} from './components/transition/transition.component
 import {FooterComponent} from "./components/footer/footer.component";
 import {KissComponent} from "./components/kiss/kiss.component";
 import { ListComponent } from './components/list/list.component';
-
+import { ProductComponent } from './components/product/product.component';
 //引入并且配置服务
 import {StorageService} from "./services/storage.service";
 import {RequestService} from "./services/request.service";
 import {HttpserviceService} from "./services/httpservice.service";
+
 
 
 
@@ -37,6 +38,7 @@ import {HttpserviceService} from "./services/httpservice.service";
     FooterComponent,
     ListComponent,
     KissComponent,
+    ProductComponent,
     HomeComponent,
     FormComponent
   ],

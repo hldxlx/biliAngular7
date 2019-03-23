@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //当做一个服务
-import { HttpClient,HttpHandlers } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 //使用服务里面的axios获取数据
 import {HttpserviceService} from "../../services/httpservice.service";
 
