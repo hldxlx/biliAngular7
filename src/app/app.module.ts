@@ -15,7 +15,10 @@ import {FormComponent} from "./components/form/form.component";
 //引入并且配置服务
 import {StorageService} from "./services/storage.service";
 import { TransitionComponent} from './components/transition/transition.component';
-import { FooterComponent } from './components/footer/footer.component';
+import {FooterComponent} from "./components/footer/footer.component";
+import {KissComponent} from "./components/kiss/kiss.component";
+import {RequestService} from "./services/request.service";
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
     TransitionComponent,
     TodolistComponent,
     FooterComponent,
+    KissComponent,
     HomeComponent,
     FormComponent
   ],
@@ -34,7 +38,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [StorageService],
+  providers: [StorageService,RequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

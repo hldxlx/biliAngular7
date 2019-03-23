@@ -9,7 +9,6 @@ export class HeaderComponent implements OnInit {
   //接受父组件传过来的数据
   @Input() tit:any;
   @Input() msg:any;
-  @Input() run:any;
   @Input() home:any;
   constructor() { }
 
@@ -24,7 +23,6 @@ export class HeaderComponent implements OnInit {
   }
   getParentRun(){
     //折行父组件的run2方法
-    // this.run();
 
     console.log(this.home.msg);
     this.home.run2();
