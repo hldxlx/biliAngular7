@@ -24,6 +24,8 @@ import {KissComponent} from "./components/kiss/kiss.component";
 import { ListComponent } from './components/list/list.component';
 import { ProductComponent } from './components/product/product.component';
 import { NewscontentComponent } from './components/newscontent/newscontent.component';
+import { NewscontenttwoComponent } from './components/newscontenttwo/newscontenttwo.component';
+import { ProductcontentComponent } from './components/productcontent/productcontent.component';
 
 
 
@@ -41,6 +43,8 @@ import { NewscontentComponent } from './components/newscontent/newscontent.compo
     KissComponent,
     ProductComponent,
     NewscontentComponent,
+    NewscontenttwoComponent,
+    ProductcontentComponent,
     HomeComponent,
     FormComponent
   ],

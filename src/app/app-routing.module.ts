@@ -6,12 +6,16 @@ import { NewsComponent } from './components/news/news.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 import { NewscontentComponent } from './components/newscontent/newscontent.component';
+import { NewscontenttwoComponent } from './components/newscontenttwo/newscontenttwo.component';
+import {ProductcontentComponent} from "./components/productcontent/productcontent.component";
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'news',component:NewsComponent},
   {path:'newscontent',component:NewscontentComponent},
+  {path:'newscontenttwo/:aid',component:NewscontenttwoComponent},
   {path:'product',component:ProductComponent},
+  {path:'productcontent/:pid',component:ProductcontentComponent},
   //匹配不到路由时加载的组件 或者跳转的组件
   {path:'**',redirectTo:'home'}
 
