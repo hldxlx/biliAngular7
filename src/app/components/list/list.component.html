@@ -1,0 +1,11 @@
+<p>
+  list works!
+</p>
+<button (click)="getData()">get 请求数据</button>
+
+<button (click)="doLogin()">post 请求数据</button>
+
+<button (click)="getJsonpData()">通过jsonp获取服务器数据（跨域的一种解决方案）</button>
+<ul>
+  <li *ngFor="let item of list">{{item.title}}</li>
+</ul>

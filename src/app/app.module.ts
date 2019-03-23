@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule,HttpClientJsonpModule } from '@angular/common/http';
 //引入表单相应模块，才可以用双向数据绑定
 import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,7 @@ import { TransitionComponent} from './components/transition/transition.component
 import {FooterComponent} from "./components/footer/footer.component";
 import {KissComponent} from "./components/kiss/kiss.component";
 import {RequestService} from "./services/request.service";
+import { ListComponent } from './components/list/list.component';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import {RequestService} from "./services/request.service";
     TransitionComponent,
     TodolistComponent,
     FooterComponent,
+    ListComponent,
     KissComponent,
     HomeComponent,
     FormComponent
@@ -36,7 +39,9 @@ import {RequestService} from "./services/request.service";
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [StorageService,RequestService],
   bootstrap: [AppComponent]
